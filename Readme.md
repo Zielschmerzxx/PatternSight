@@ -34,5 +34,5 @@ conda activate PatternSight
 pip install -r requirements.txt
 
 # Start the API server
-python app.py
+python app.y
 ```

@@ -728,8 +728,21 @@ const debounce = (fn, delay) => {
 // 格式化SVG代码
 const formatSvgCode = (svgString, shouldFilterClass = false) => {
   try {
+    // 检查输入是否为空或无效
+    if (!svgString || typeof svgString !== 'string') {
+      return svgString || '';
+    }
+    
+    // 去除首尾空白
+    const trimmedString = svgString.trim();
+    
+    // 如果为空字符串，直接返回
+    if (!trimmedString) {
+      return '';
+    }
+    
     // 尝试修复SVG常见错误，防止解析失败
-    let fixedSvgString = svgString
+    let fixedSvgString = trimmedString
       // 修复不匹配的引号
       .replace(/=(['"])(.*?)(?!\1)(['"])/g, '=$1$2$1')
       // 修复缺少引号的属性值
@@ -750,7 +763,10 @@ const formatSvgCode = (svgString, shouldFilterClass = false) => {
     // 检查是否有解析错误
     const parseError = doc.querySelector('parsererror')
     if (parseError) {
-      console.error('SVG parsing error detected:', parseError.textContent)
+      // 只在开发环境或非空内容时输出错误
+      if (fixedSvgString.trim().length > 0) {
+        console.warn('SVG parsing error detected:', parseError.textContent)
+      }
       return fixedSvgString;
     }
 

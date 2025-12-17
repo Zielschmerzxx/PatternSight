@@ -1,46 +1,46 @@
 [
     {
-        "attribute": "height",
-        "num": 20
-    },
-    {
         "attribute": "id",
-        "num": 20
+        "num": 56
     },
     {
         "attribute": "tag_name",
-        "num": 20
+        "num": 56
     },
     {
-        "attribute": "width",
-        "num": 20
+        "attribute": "cx",
+        "num": 53
+    },
+    {
+        "attribute": "cy",
+        "num": 53
     },
     {
         "attribute": "fill",
-        "num": 19
+        "num": 53
     },
     {
-        "attribute": "x",
-        "num": 19
-    },
-    {
-        "attribute": "y",
-        "num": 19
+        "attribute": "r",
+        "num": 53
     },
     {
         "attribute": "class",
+        "num": 47
+    },
+    {
+        "attribute": "stroke-width",
+        "num": 16
+    },
+    {
+        "attribute": "stroke",
         "num": 15
     },
     {
-        "attribute": "rx",
-        "num": 15
+        "attribute": "height",
+        "num": 1
     },
     {
-        "attribute": "ry",
-        "num": 15
-    },
-    {
-        "attribute": "version",
+        "attribute": "width",
         "num": 1
     },
     {
@@ -49,6 +49,22 @@
     },
     {
         "attribute": "xmlns:xlink",
+        "num": 1
+    },
+    {
+        "attribute": "attributeName",
+        "num": 1
+    },
+    {
+        "attribute": "dur",
+        "num": 1
+    },
+    {
+        "attribute": "repeatCount",
+        "num": 1
+    },
+    {
+        "attribute": "values",
         "num": 1
     }
 ]

@@ -182,6 +182,7 @@ def generate_subgraph(identifiers, features, dimensions, clustering_method):
             clustering = 1.0
         elif best_gmm is not None:
             variances = best_gmm.covariances_.reshape(-1)  # 展平协方差矩阵
+            np.maximum(variances, 0) 
             weights = 1 / (variances + 1e-6)  # 避免除以零
             total_weight = np.sum(weights)
             normalized_weights = weights / total_weight

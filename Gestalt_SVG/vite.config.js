@@ -26,6 +26,7 @@ export default defineConfig({
     exclude: ['monaco-editor']
   },
   build: {
+    sourcemap: false,
     target: 'esnext',
     minify: false,
     rollupOptions: {
@@ -37,6 +38,12 @@ export default defineConfig({
   },
   server: {
     host: '0.0.0.0',
-    port: 5173
+    port: 5173,
+    hmr: {
+      overlay: true
+    }
+  },
+  esbuild: {
+    sourcemap: false
   }
 })
