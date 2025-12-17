@@ -1,97 +1,56 @@
 {
-    "200.0-200.0": {
+    "80.0-110.0": {
         "tags": [
-            "circle_52"
+            "rect_11",
+            "rect_10",
+            "rect_9",
+            "rect_8",
+            "rect_6"
         ],
         "total": {
-            "circle": 1
+            "rect": 5
         }
     },
-    "400.0-400.0": {
+    "60.0-60.3": {
         "tags": [
-            "circle_51"
+            "rect_7"
         ],
         "total": {
-            "circle": 1
+            "rect": 1
         }
     },
-    "600.0-600.0": {
+    "320.0-340.0": {
         "tags": [
-            "circle_50"
+            "rect_5",
+            "rect"
         ],
         "total": {
-            "circle": 1
+            "rect": 2
         }
     },
-    "360.0-360.0": {
+    "360.0-360.3": {
         "tags": [
-            "circle_49"
+            "rect_4"
         ],
         "total": {
-            "circle": 1
+            "rect": 1
         }
     },
-    "26.1-44.0": {
+    "280.0-300.0": {
         "tags": [
-            "circle_48",
-            "circle_46",
-            "circle_45",
-            "circle_44",
-            "circle_43",
-            "circle_42",
-            "circle_41",
-            "circle_40",
-            "circle_39",
-            "circle_38",
-            "circle_37"
+            "rect_3",
+            "rect_2"
         ],
         "total": {
-            "circle": 11
+            "rect": 2
         }
     },
-    "8.0-26.0": {
+    "380.0-380.3": {
         "tags": [
-            "circle_47",
-            "circle_36",
-            "circle_35",
-            "circle_34",
-            "circle_33",
-            "circle_32",
-            "circle_31",
-            "circle_30",
-            "circle_29",
-            "circle_28",
-            "circle_27",
-            "circle_26",
-            "circle_25",
-            "circle_24",
-            "circle_23",
-            "circle_22",
-            "circle_21",
-            "circle_20",
-            "circle_19",
-            "circle_18",
-            "circle_17",
-            "circle_16",
-            "circle_15",
-            "circle_14",
-            "circle_13",
-            "circle_12",
-            "circle_11",
-            "circle_10",
-            "circle_9",
-            "circle_8",
-            "circle_7",
-            "circle_6",
-            "circle_5",
-            "circle_4",
-            "circle_3",
-            "circle_2",
-            "circle_1",
-            "circle"
+            "rect_1"
         ],
         "total": {
-            "circle": 38
+            "rect": 1
         }
     }
 }

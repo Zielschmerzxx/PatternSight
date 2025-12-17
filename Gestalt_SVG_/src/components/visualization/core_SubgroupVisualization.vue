@@ -50,7 +50,7 @@
                         </div>
                         <div class="encodings-wrapper">
                             <div class="visual-encodings">
-                                Used visual effects:
+                                Used visual properties:
                             </div>
                             <div class="analysis-content" v-html="generateAnalysis(node)"></div>
                         </div>

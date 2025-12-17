@@ -3,7 +3,7 @@
     <div class="analysis-words-container">
       <!-- 保持大标题在顶部 -->
       <div class="title-row" style="display: flex; align-items: center; justify-content: space-between;">
-        <div class="title">Visual Effect Assessment</div>
+        <div class="title">Visual Property Assessment</div>
         <el-button
           type="primary"
           icon="el-icon-data-analysis"
@@ -1101,7 +1101,7 @@ const generateAnalysis = (normalData, isSelectedNodes = false, selectedNodeIds =
       })
       .slice(0, 20); // 最多显示20个
 
-    // 处理冲突关系，筛选出不冲突的特征（used effects
+    // 处理冲突关系，筛选出不冲突的特征（used properties
     const processedSignificantFeatures = [];
     const usedSignificantConflictGroups = new Set(); // 用于记录已使用的冲突组
 
@@ -1203,7 +1203,7 @@ const generateAnalysis = (normalData, isSelectedNodes = false, selectedNodeIds =
 
     // 正差异特征（选中元素特有的特征）- Used Features
     analysis += '<div class="feature-column positive selected-elements">';
-    analysis += `<div class="column-title all-elements-title">Used dimensions <span class="distinct-values-label"><span class="hash-symbol">#</span><span class="label-text">Distinct<br>effects</span></span></div>`;
+    analysis += `<div class="column-title all-elements-title">Used dimensions <span class="distinct-values-label"><span class="hash-symbol">#</span><span class="label-text">Distinct<br>properties</span></span></div>`;
     analysis += `<div class="column-content">`; // 添加内容容器
 
     if (processedSignificantFeatures.length > 0) {
@@ -1257,7 +1257,7 @@ const generateAnalysis = (normalData, isSelectedNodes = false, selectedNodeIds =
       const addFeaturesList = [];
       const resetFeaturesList = [];
 
-      // 获取All elements中的Available effects
+      // 获取All elements中的Available properties
       // 筛选出方差较小的特征，作为可用但未充分利用的特征
       const availableEncodings = featureArray
         .filter(feature =>
@@ -1365,17 +1365,17 @@ const generateAnalysis = (normalData, isSelectedNodes = false, selectedNodeIds =
         }
       }
 
-      // 创建一个共享容器，包含add visual effects visual effects annotations
+      // 创建一个共享容器，包含add visual properties visual properties annotations
       analysis += `<div class="suggestions-shared-container">`;
       // 移除总表头
       // analysis += `<div class="suggestions-table-header">Suggestions</div>`;
 
-      // 1. Add Visual effects 区域 - 修改为表格式行布局
+      // 1. Add Visual properties 区域 - 修改为表格式行布局
       analysis += `<div class="suggestions-table-row">`;
       analysis += `<div class="suggestions-section-title">Add</div>`;
       analysis += `<div class="suggestions-content-cell">`;
 
-      // 合并Available effects
+      // 合并Available properties
       const combinedAddFeatures = [...processedAvailableEncodings];
 
       // 添加多样性为1且值为0的编码，并去重
@@ -1777,7 +1777,7 @@ const generateAnalysis = (normalData, isSelectedNodes = false, selectedNodeIds =
       analysis += `</div>`; // 关闭内容单元格
       analysis += `</div>`; // 关闭表格行
 
-      // 2. Modify Visual effects 区域 - 修改为表格式行布局
+      // 2. Modify Visual properties 区域 - 修改为表格式行布局
       analysis += `<div class="suggestions-table-row">`;
       analysis += `<div class="suggestions-section-title">Modify</div>`;
       analysis += `<div class="suggestions-content-cell">`;
@@ -2489,10 +2489,10 @@ const generateAnalysis = (normalData, isSelectedNodes = false, selectedNodeIds =
       }
     }
 
-    // 重置冲突组记录，为Available effects
+    // 重置冲突组记录，为Available properties
     usedConflictGroups.clear();
 
-    // 处理多样性低的特征（Available effects
+    // 处理多样性低的特征（Available properties
     for (const feature of leastDistinctive) {
       const featureKey = feature.featureKeys[0];
       const group = getConflictGroup(featureKey);
@@ -2520,10 +2520,10 @@ const generateAnalysis = (normalData, isSelectedNodes = false, selectedNodeIds =
       }
     }
 
-    // 重置冲突组记录，为Available effects
+    // 重置冲突组记录，为Available properties
     usedConflictGroups.clear();
 
-    // 处理多样性低的特征（Available effects
+    // 处理多样性低的特征（Available properties
     const featuresWithSalience = [];
 
     for (const feature of leastDistinctive) {
@@ -2600,7 +2600,7 @@ const generateAnalysis = (normalData, isSelectedNodes = false, selectedNodeIds =
 
     // 最突出的特征 - Used Features
     analysis += '<div class="feature-column negative all-elements">';
-    analysis += `<div class="column-title all-elements-title">Used dimensions <span class="distinct-values-label"><span class="hash-symbol">#</span><span class="label-text">Distinct<br>effects</span></span></div>`;
+    analysis += `<div class="column-title all-elements-title">Used dimensions <span class="distinct-values-label"><span class="hash-symbol">#</span><span class="label-text">Distinct<br>properties</span></span></div>`;
     analysis += `<div class="column-content">`; // 添加内容容器
 
     if (finalDiverseFeatures.length > 0) {
@@ -3943,7 +3943,7 @@ const calculateSuggestionSalience = async (ids, attributes) => {
   background-color: rgba(0, 0, 0, 0.02);
 }
 
-/* 为 All elements 部分的 Used visual effects 添加特殊的 feature-item 样式 */
+/* 为 All elements 部分的 Used visual properties 添加特殊的 feature-item 样式 */
 :deep(.feature-column.negative .feature-item),
 :deep(.feature-column.positive .feature-item) {
   padding: 3px 6px;
@@ -4125,7 +4125,7 @@ const calculateSuggestionSalience = async (ids, attributes) => {
   opacity: 0.9;
 }
 
-/* 添加 All elements 部分的 Used visual effects 下的 tag 特殊样式 */
+/* 添加 All elements 部分的 Used visual properties 下的 tag 特殊样式 */
 :deep(.all-elements-tag) {
   width: 100%;
   min-width: 100%;
@@ -4163,7 +4163,7 @@ const calculateSuggestionSalience = async (ids, attributes) => {
   color: #333 !important;
 }
 
-/* 添加 All elements 部分的 Used visual effects 标题样式 */
+/* 添加 All elements 部分的 Used visual properties 标题样式 */
 :deep(.all-elements-title) {
   font-size: 1.3em;
   /* 增大字体大小，从1.1em改为1.3em */
@@ -4446,7 +4446,7 @@ const calculateSuggestionSalience = async (ids, attributes) => {
 /* 修改左右两侧区域的宽度比例 - All elements部分 */
 :deep(.feature-column.positive.all-elements) {
   flex: 1;
-  /* 增加Available effects */
+  /* 增加Available properties */
 }
 
 :deep(.feature-column.negative.all-elements) {
