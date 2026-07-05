@@ -32,7 +32,7 @@
                     <div class="svg-container mac-style-container display-svg" ref="displaySvgContainer">
                         <div v-html="displaySvgContent"></div>
                         <div class="visual-salience-indicator" @click="showSalienceDetail">
-                            <span class="salience-label">Visual salience</span>
+                            <span class="salience-label">Grouping salience score</span>
                             <span class="salience-value" v-if="selectedNodeIds.length > 0 && !fromPerceptionScope && visualSalienceFromStore">{{ visualSalienceFromStore }}</span>
                             <span class="salience-value" v-else>--.---</span>
                         </div>
@@ -61,7 +61,7 @@
                             <table>
                                 <tbody>
                                     <tr>
-                                        <td class="element-type-table-header" style="font-weight: 700;">Element types</td>
+                                        <td class="element-type-table-header" style="font-weight: 700;">Element type</td>
                                         <td v-for="element in visibleElements" :key="element.id">
                                             <v-checkbox v-model="selectedElements" :value="element.id" hide-details density="compact" class="mac-style-checkbox">
                                                 <template v-slot:label>
@@ -2517,7 +2517,7 @@ const handleNodeRemoved = (event) => {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    max-width: 220px;
+    max-width: 300px;
     text-align: center;
     z-index: 100;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);

@@ -1199,7 +1199,7 @@ const generateAnalysis = (normalData, isSelectedNodes = false, selectedNodeIds =
 
     // 负差异特征（选中元素缺乏的特征）- Suggest Features
     analysis += '<div class="feature-column negative selected-elements">';
-    analysis += `<div class="column-title all-elements-title">Suggestions for improving salience</div>`;
+    analysis += `<div class="column-title all-elements-title">Suggestions for improving grouping salience</div>`;
     analysis += `<div class="column-content">`; // 添加内容容器
 
     // 检查visual salience值是否小于85
@@ -2256,7 +2256,7 @@ const generateAnalysis = (normalData, isSelectedNodes = false, selectedNodeIds =
                     <div class="salience-icon">✓</div>
                     <div class="salience-content">
                         <div class="salience-row">
-                            <div class="salience-title">Visual salience is already good</div>
+                            <div class="salience-title">Grouping salience score is already good</div>
                             <div class="salience-value">${currentVisualSalience.toFixed(3)}</div>
                         </div>
                     </div>

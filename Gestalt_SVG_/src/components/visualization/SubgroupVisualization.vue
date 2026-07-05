@@ -1,7 +1,7 @@
 <template>
     <div class="force-graph-container">
         <div class="title-container">
-            <span class="title">Patterns List</span>
+            <span class="title">Grouping Results</span>
             <div class="legend-container">
                 <div class="cluster-legend">
                     <div class="cluster-legend-item">
@@ -12,11 +12,11 @@
                             <div class="arrow-triangle"></div>
                         </div>
                         <div class="cluster-box correspond-box"></div>
-                        <span class="cluster-label correspond-label">Related patterns</span>
+                        <span class="cluster-label correspond-label">Related groups</span>
                     </div>
                 </div>
                 <div class="salience-legend">
-                    <span class="legend-label">Salience：</span>
+                    <span class="legend-label">Grouping salience score(GSS):</span>
                     <span class="legend-text">0</span>
                     <div class="legend-gradient"></div>
                     <span class="legend-text">{{ maxSalienceValue }}</span>

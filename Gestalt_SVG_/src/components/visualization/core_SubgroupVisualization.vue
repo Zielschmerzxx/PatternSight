@@ -55,7 +55,7 @@
                             <div class="analysis-content" v-html="generateAnalysis(node)"></div>
                         </div>
                         <div class="attention-probability">
-                            <span class="attention-probability-label">Visual salience</span>
+                            <span class="attention-probability-label">GSS</span>
                             <span class="attention-probability-value">{{ (calculateAttentionProbability(node) * 100).toFixed(3) }}</span>
                         </div>
                     </div>

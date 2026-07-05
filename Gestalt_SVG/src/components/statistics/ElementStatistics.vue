@@ -1,7 +1,7 @@
 <template>
     <div class="statistics-container">
         <div class="title-container">
-            <span class="title">Elements Type</span>
+            <span class="title">Element type</span>
         </div>
         <div ref="chartContainer" class="chart-container"></div>
         <div v-if="!hasData" class="no-data-message">No Elements</div>
