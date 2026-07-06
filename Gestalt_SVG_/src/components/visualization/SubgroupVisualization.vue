@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="salience-legend">
-                    <span class="legend-label">Grouping salience score(GSS):</span>
+                    <span class="legend-label">Grouping salience score (GSS):</span>
                     <span class="legend-text">0</span>
                     <div class="legend-gradient"></div>
                     <span class="legend-text">{{ maxSalienceValue }}</span>
